@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RazorPagesTutorial.Models\RazorPagesTutorial.Models.csproj" />
+    <ProjectReference Include="..\RazorPagesTutorial.Services\RazorPagesTutorial.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
