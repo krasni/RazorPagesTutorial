@@ -20,9 +20,16 @@ namespace RazorPagesTutorial.Pages.Employees
 
         public Employee Employee { get; set; }
 
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             Employee = employeeRepository.GetEmployee(id);
+
+            if (Employee == null)
+            {
+                return RedirectToPage("/NotFound");
+            }
+
+            return Page();
         }
     }
 }
